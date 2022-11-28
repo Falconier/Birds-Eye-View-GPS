@@ -17,8 +17,8 @@ while(True):
     print(datatype)
     print(parsedata)
     if (datatype == 'GGA'):
-        print(parsedata.lon)
-        print(parsedata.lat)
+        print(parsedata.longitude)
+        print(parsedata.latitude)
         print(parsedata.timestamp)
     elif (datatype == 'GSA'):
         print('GSA')
