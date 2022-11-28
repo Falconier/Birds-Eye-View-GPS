@@ -17,9 +17,15 @@ while(True):
     print(datatype)
     print(parsedata)
     if (datatype == 'GGA'):
-        print(parsedata.longitude)
-        print(parsedata.latitude)
         print(parsedata.timestamp)
+        print(parsedata.latitude, parsedata.lat_dir)
+        print(parsedata.longitude, parsedata.lon_dir)
+        print(parsedata.altitude,parsedata.altitude_units)
+        print(parsedata.horizontal_dil)
+        print(parsedata.num_sats)
+        print(parsedata.gps_qual)
+        print(parsedata.ref_station_id)
+        print(parsedata.geo_sep,parsedata.geo_sep_units)
     elif (datatype == 'GSA'):
         print('GSA')
     elif (datatype == 'RMC'):
