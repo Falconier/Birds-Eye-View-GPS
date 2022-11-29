@@ -4,6 +4,7 @@ import io
 
 baudRate = 9600
 ser = serial.Serial('/dev/ttyS3', baudRate)
+## ser = serial.Serial('/dev/ttyUSB0')
 print(ser.name)
 ## skip first line in case we only capture a partial message
 ser.readline()
@@ -76,6 +77,18 @@ while(True):
         # print(parsedata.elevation_deg_4)
         # print(parsedata.azimuth_4)
         # print(parsedata.snr_4)
+    elif (datatype == 'VTG'):
+        print('VTG')
+        print(pynmea2.VTG.fields)
+        print(parsedata.true_track)
+        print(parsedata.true_track_sym)
+        print(parsedata.mag_track)
+        print(parsedata.mag_track_sym)
+        print(parsedata.spd_over_grnd_kts)
+        print(parsedata.spd_over_grnd_kts_sym)
+        print(parsedata.spd_over_grnd_kmph)
+        print(parsedata.spd_over_grnd_kmph_sym)
+        print(parsedata.faa_mode)
     else:
         print(datatype)
         print(datastring)
